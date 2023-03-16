@@ -1,1 +1,24 @@
+/************************************Question****************************************
 
+If the all the elements are same in the array then what is the total number of distinct subarray of size n ???
+Formula : (n*(n+1))/2
+
+*************************************************************************************
+You are given an array arr  of length N of 0's and 1's. Find the total number of subarrays of 0's
+
+*************************************************************************************/
+
+
+int no_of_subarrays(vector<int> arr) {
+    int count = 0;
+    int n = arr.size();
+    for(int i=0;i<n;i++){
+        if(arr[i] == 0){
+            int this_count = 0;
+            while(i<n && arr[i++] == 0)this_count++;
+            count += (this_count*(this_count+1))/2;
+            i--;
+        }
+    }
+    return count;
+}
