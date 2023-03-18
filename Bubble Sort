@@ -1,0 +1,11 @@
+void Bubble_Sort(vector<int> Num){
+    for(int i=0;i<Num.size()-1;i++){
+        for(int j=0;j<Num.size()-i-1;j++){
+            if(Num[j] > Num[j+1]){
+                int Swap = Num[j];
+                Num[j] = Num[j+1];
+                Num[j+1] = Swap;
+            }
+        }
+    }
+}
