@@ -17,3 +17,4 @@ void Selection_Sort(vector<int>& Num){
         Num[minIndex] = Swap;
     }
 }
+
